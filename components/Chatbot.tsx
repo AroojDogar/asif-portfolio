@@ -85,7 +85,7 @@ export default function Chatbot() {
               <div>
                 <p className="font-medium">Asif&apos;s AI Assistant</p>
                 <p className="flex items-center gap-1.5 text-xs text-dim">
-                  <span className="h-1.5 w-1.5 rounded-full bg-green-400" /> Online · powered by Claude
+                  <span className="h-1.5 w-1.5 rounded-full bg-green-400" /> Online · powered by Gemini
                 </p>
               </div>
             </div>

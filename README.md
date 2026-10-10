@@ -1,13 +1,13 @@
 # Mian Asif Langrah — Portfolio
 
-Built with **Next.js**, **Tailwind CSS**, **Three.js** (React Three Fiber), **Motion** and the **Claude API**. Deployed on **Vercel**.
+Built with **Next.js**, **Tailwind CSS**, **Three.js** (React Three Fiber), **Motion** and **Google Gemini**. Deployed on **Vercel**.
 
 ## Features
 
 - Interactive 3D "AI core" hero (gold liquid sphere, orbit rings, particles) that follows the mouse
 - Preloader, custom cursor, magnetic buttons, word-by-word text reveals, parallax on scroll
 - 3D tilt cards with light glare, spinning 3D skills globe, scroll-drawn career timeline
-- AI chatbot that answers questions about Asif (powered by Claude)
+- AI chatbot that answers questions about Asif (powered by Google Gemini)
 
 ## Run locally
 
@@ -25,10 +25,10 @@ Profile photo: put the image at `public/profile.jpg`.
 
 ## AI chatbot
 
-The chatbot works out of the box with built-in answers. For real AI answers, add an Anthropic API key:
+The chatbot works out of the box with built-in answers. For real AI answers, add a free Gemini API key from https://aistudio.google.com/apikey:
 
-- Locally: create `.env.local` with `ANTHROPIC_API_KEY=your-key`
-- On Vercel: Project → Settings → Environment Variables → add `ANTHROPIC_API_KEY`
+- Locally: create `.env.local` with `GEMINI_API_KEY=your-key`
+- On Vercel: Project → Settings → Environment Variables → add `GEMINI_API_KEY`, then redeploy
 
 ## Deploy
 
