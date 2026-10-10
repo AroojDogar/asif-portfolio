@@ -6,9 +6,9 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const serif = Instrument_Serif({ variable: "--font-serif-display", subsets: ["latin"], weight: "400", style: ["normal", "italic"] });
 
 export const metadata: Metadata = {
-  title: "Mian Asif Langrah | Generative & Agentic AI Engineer",
+  title: "Mian Asif Langrah | Agentic AI Engineer & Forward Deployed Engineer",
   description:
-    "Mian Asif Langrah: Generative & Agentic AI Engineer, Full-Stack Developer and Head of Program at PAIB. AI agents, chatbots, GPTs, Next.js and FastAPI.",
+    "Mian Asif Langrah: Agentic AI Engineer, Forward Deployed Engineer, AI Consultant and AI Trainer. AI agents, AI employees, AI automation and AI-powered applications.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

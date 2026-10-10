@@ -3,7 +3,7 @@ import Cursor from "@/components/Cursor";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TagSphere from "@/components/TagSphere";
-import Timeline from "@/components/Timeline";
+import LogoStrip from "@/components/LogoStrip";
 import ProfilePhoto from "@/components/ProfilePhoto";
 import ContactSection from "@/components/ContactSection";
 import Chatbot from "@/components/Chatbot";
@@ -37,6 +37,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <LogoStrip />
 
 
         {/* ABOUT */}
@@ -81,23 +82,46 @@ export default function Home() {
               <RevealText text="From idea to" /> <RevealText text="intelligent product." className="italic text-gold" delay={0.2} />
             </h2>
             <div className="mt-16 grid gap-5 md:grid-cols-2">
-              {services.map((s, i) => (
-                <FadeIn key={s.title} delay={i * 0.08}>
-                  <TiltCard className="rounded-3xl">
-                    <div className="group flex h-full flex-col rounded-3xl border border-white/8 bg-panel/70 p-8 backdrop-blur transition-colors hover:border-gold/40">
-                      <div className="flex items-start justify-between">
-                        <span className="font-serif text-6xl text-white/10 transition-colors group-hover:text-gold/40">0{i + 1}</span>
-                        <span className="grid h-11 w-11 place-items-center rounded-full border border-white/10 transition-all group-hover:rotate-[-45deg] group-hover:border-gold group-hover:bg-gold group-hover:text-ink">→</span>
+              {services.map((s, i) =>
+                s.featured ? (
+                  <FadeIn key={s.title} className="md:col-span-2">
+                    <TiltCard className="rounded-3xl">
+                      <div className="group relative h-full overflow-hidden rounded-3xl bg-gradient-to-br from-gold/70 via-gold/15 to-violet/50 p-px">
+                        <div className="relative grid h-full gap-8 rounded-[calc(1.5rem-1px)] bg-panel p-8 sm:p-10 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+                          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-gold/15 blur-3xl" />
+                          <div className="relative">
+                            <div className="flex flex-wrap items-center gap-3">
+                              <span className="font-serif text-6xl text-gold/40">0{i + 1}</span>
+                              <span className="rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-[11px] tracking-[0.2em] text-gold uppercase">Flagship service</span>
+                            </div>
+                            <h3 className="mt-6 font-serif text-4xl sm:text-5xl">{s.title}</h3>
+                            <p className="mt-4 max-w-xl text-lg text-dim">{s.text}</p>
+                          </div>
+                          <div className="relative flex flex-wrap gap-2 lg:justify-end">
+                            {s.tags.map((t) => <span key={t} className="rounded-full border border-gold/30 bg-gold/5 px-4 py-2 text-sm text-cream">{t}</span>)}
+                          </div>
+                        </div>
                       </div>
-                      <h3 className="mt-10 font-serif text-3xl">{s.title}</h3>
-                      <p className="mt-3 text-dim">{s.text}</p>
-                      <div className="mt-6 flex flex-wrap gap-2">
-                        {s.tags.map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 text-xs text-dim">{t}</span>)}
+                    </TiltCard>
+                  </FadeIn>
+                ) : (
+                  <FadeIn key={s.title} delay={(i % 2) * 0.08}>
+                    <TiltCard className="rounded-3xl">
+                      <div className="group flex h-full flex-col rounded-3xl border border-white/8 bg-panel/70 p-8 backdrop-blur transition-colors hover:border-gold/40">
+                        <div className="flex items-start justify-between">
+                          <span className="font-serif text-6xl text-white/10 transition-colors group-hover:text-gold/40">0{i + 1}</span>
+                          <span className="grid h-11 w-11 place-items-center rounded-full border border-white/10 transition-all group-hover:rotate-[-45deg] group-hover:border-gold group-hover:bg-gold group-hover:text-ink">→</span>
+                        </div>
+                        <h3 className="mt-10 font-serif text-3xl">{s.title}</h3>
+                        <p className="mt-3 text-dim">{s.text}</p>
+                        <div className="mt-6 flex flex-wrap gap-2">
+                          {s.tags.map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 text-xs text-dim">{t}</span>)}
+                        </div>
                       </div>
-                    </div>
-                  </TiltCard>
-                </FadeIn>
-              ))}
+                    </TiltCard>
+                  </FadeIn>
+                )
+              )}
             </div>
           </div>
         </section>
@@ -135,7 +159,7 @@ export default function Home() {
                 <RevealText text="A toolkit built for" /> <RevealText text="the AI era." className="italic text-gold" delay={0.2} />
               </h2>
               <FadeIn>
-                <p className="mt-6 max-w-md text-lg text-dim">Models, agents and the full-stack engineering that turns them into dependable products. Move your cursor over the globe to spin it.</p>
+                <p className="mt-6 max-w-md text-lg text-dim">Models, agents, automation tools and the engineering that turns them into dependable products. Move your cursor over the globe to spin it.</p>
               </FadeIn>
             </div>
             <FadeIn delay={0.2}><TagSphere tags={skills} /></FadeIn>
@@ -151,7 +175,7 @@ export default function Home() {
                 <RevealText text="Products that" /> <RevealText text="ship." className="italic text-gold" delay={0.15} />
               </h2>
               <FadeIn>
-                <a href={profile.github} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 px-5 py-3 text-sm transition-colors hover:border-gold hover:text-gold">All 80+ repositories ↗</a>
+                <a href={profile.github} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 px-5 py-3 text-sm transition-colors hover:border-gold hover:text-gold">View GitHub ↗</a>
               </FadeIn>
             </div>
             <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -179,21 +203,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* JOURNEY */}
-        <section id="journey" className="py-28 sm:py-36">
-          <div className={wrap}>
-            <Label n="06">Journey</Label>
-            <h2 className="font-serif text-4xl leading-[1.05] sm:text-6xl">
-              <RevealText text="Six chapters," /> <RevealText text="one mission." className="italic text-gold" delay={0.2} />
-            </h2>
-            <Timeline />
-          </div>
-        </section>
-
         {/* TESTIMONIALS */}
         <section className="overflow-hidden py-28 sm:py-36">
           <div className={wrap}>
-            <Label n="07">Kind words</Label>
+            <Label n="06">Kind words</Label>
           </div>
           <div className={`${wrap} grid gap-6 md:grid-cols-3`}>
             {testimonials.map((t, i) => (

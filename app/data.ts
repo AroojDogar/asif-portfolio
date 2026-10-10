@@ -4,15 +4,11 @@ export const profile = {
   name: "Mian Asif Langrah",
   firstName: "Mian Asif",
   lastName: "Langrah",
-  title: "Generative & Agentic AI Engineer",
-  subtitle: "Full-Stack Developer",
-  position: "Head of Program",
-  org: "PAIB: Pakistan Artificial Intelligence & Blockchain",
-  orgShort: "PAIB",
+  title: "Agentic AI Engineer",
+  roleLine: ["Agentic AI Engineer", "Forward Deployed Engineer", "AI Consultant", "AI Trainer"],
   location: "Islamabad, Pakistan",
-  roles: ["AI Agents", "Custom GPTs", "LLM Fine-Tuning", "MCP Automation", "Next.js Apps", "FastAPI Backends"],
   intro:
-    "I design and ship intelligent products: autonomous AI agents, chatbots, GPTs and full-stack web platforms. I also lead programs that turn students into industry-ready AI engineers.",
+    "I build AI agents, AI automations and AI-powered applications that do real work inside real businesses, and I train teams and students to build them too.",
   email: "asiflangrah@gmail.com",
   whatsapp: "923337414152",
   phone: "+92 333 7414152",
@@ -22,22 +18,28 @@ export const profile = {
 };
 
 export const stats = [
-  { value: 5, suffix: "+", label: "Years building software" },
-  { value: 80, suffix: "+", label: "Open-source repositories" },
-  { value: 6, suffix: "", label: "Companies & institutes" },
+  { value: 7, suffix: "+", label: "Years of experience" },
+  { value: 200, suffix: "+", label: "Projects delivered" },
+  { value: 10, suffix: "", label: "Companies & institutes" },
   { value: 20, suffix: "+", label: "Technologies in the stack" },
 ];
 
 export const about = [
-  "I'm a Generative & Agentic AI Engineer who builds innovative, user-friendly AI web applications, from simple AI-powered websites to complex multi-agent systems. I work across the full stack with TypeScript, Python, FastAPI, Node.js, React and Next.js, and specialize in LLM fine-tuning, MCPs and AI automation.",
-  "As Head of Program at PAIB, I lead AI and blockchain education and help the next generation of Pakistani engineers build for the global market.",
+  "I'm an Agentic AI Engineer and Forward Deployed Engineer. I work directly with businesses to understand their workflows, then design, build and deploy AI agents, AI employees, automations and AI-powered applications that deliver measurable results.",
+  "With 7+ years of experience and 200+ projects delivered, I also work as an AI consultant and trainer, helping teams and students master Generative and Agentic AI for the global market.",
 ];
 
 export const services = [
-  { title: "Agentic AI Systems", text: "Autonomous agents that plan, use tools and complete real business workflows end to end.", tags: ["Agents", "MCP", "Tool use"] },
+  {
+    title: "AI Agents & AI Employees",
+    text: "Autonomous AI agents and digital AI employees that plan, use tools and run complete business workflows end to end: sales, support, operations and research, working 24/7.",
+    tags: ["AI Agents", "AI Employees", "Multi-Agent", "MCP", "Tool use"],
+    featured: true,
+  },
   { title: "Chatbots & Custom GPTs", text: "Conversational assistants trained on your data, deployed on web, WhatsApp and internal tools.", tags: ["RAG", "OpenAI", "GPTs"] },
   { title: "LLM Fine-Tuning", text: "Domain-adapted language models integrated into products with evaluation and guardrails.", tags: ["Fine-tune", "Eval", "Python"] },
-  { title: "Full-Stack Platforms", text: "Fast, scalable web apps with Next.js front ends and FastAPI or Node.js back ends.", tags: ["Next.js", "FastAPI", "PostgreSQL"] },
+  { title: "AI-Powered Applications", text: "Production-ready web apps with AI at the core, from idea and prototype to deployed product.", tags: ["Next.js", "FastAPI", "PostgreSQL"] },
+  { title: "AI Automations", text: "Connect your apps and automate repetitive work with AI-driven workflows that save hours every week.", tags: ["n8n", "Make", "Zapier", "Lovable", "MCP"] },
 ];
 
 export const process = [
@@ -50,17 +52,11 @@ export const process = [
 export const skills = [
   "OpenAI", "AI Agents", "Agentic AI", "GPTs", "Chatbots", "LLM Fine-Tuning", "MCP", "RAG",
   "TypeScript", "JavaScript", "Python", "React", "Next.js", "Tailwind CSS", "Redux", "Shadcn UI",
-  "FastAPI", "Node.js", "PostgreSQL", "Stripe", "Sanity", "Git", "Vercel", "MUI",
+  "FastAPI", "Node.js", "PostgreSQL", "n8n", "Make", "Zapier", "Lovable", "Stripe", "Sanity", "Git", "Vercel", "MUI",
 ];
 
-export const experience = [
-  { company: "PAIB", full: "Pakistan Artificial Intelligence & Blockchain", role: "Head of Program", date: "Present", current: true },
-  { company: "PIAIC", full: "Presidential Initiative for Artificial Intelligence & Computing", role: "AI & Web Development", date: "Since Feb 2023" },
-  { company: "Devigital Systems", full: "Software house", role: "Software Development", date: "Since Feb 2021" },
-  { company: "SoftCircles", full: "Software house", role: "Software Development", date: "Oct 2020 – Feb 2021" },
-  { company: "Interns Spark", full: "Internship program", role: "Internship", date: "Aug 2020 – Oct 2020" },
-  { company: "ILUMAS CUI", full: "COMSATS University Islamabad", role: "Development", date: "Sep 2019 – Aug 2020" },
-];
+// Logos shown in the rotating "Working in" strip, in this order.
+export const companies = ["OpenAI", "Microsoft", "Google", "ManTech International", "PAIB"];
 
 export const projects = [
   { title: "SignaCapture", category: "EdTech Platform", text: "A platform where students design customized albums and images with ease.", tags: ["React", "Node.js", "PostgreSQL", "MUI"], hue: 42, link: "https://github.com/Asif-langrah" },

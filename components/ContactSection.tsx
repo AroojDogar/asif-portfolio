@@ -38,7 +38,7 @@ export default function ContactSection() {
             <div className="grid gap-12 rounded-[calc(2.5rem-1px)] bg-ink2/95 p-5 sm:p-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
               <div className="flex flex-col">
                 <p className="flex items-center gap-3 text-xs tracking-[0.25em] text-gold uppercase">
-                  <span className="text-dim">08</span>
+                  <span className="text-dim">07</span>
                   <span className="h-px w-10 bg-gold/50" />
                   Contact
                 </p>

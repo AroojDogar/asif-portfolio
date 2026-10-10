@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
-const links = ["About", "Services", "Work", "Journey", "Contact"];
+const links = ["About", "Services", "Work", "Contact"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

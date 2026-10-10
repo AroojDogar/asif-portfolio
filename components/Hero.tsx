@@ -56,8 +56,13 @@ export default function Hero() {
           <Line delay={0.22} className="gold-text italic">{profile.lastName}</Line>
         </h1>
 
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: start + 0.6, duration: 0.9, ease }} className="mt-6 text-lg font-medium text-cream sm:text-2xl">
-          {profile.title} <span className="text-gold">·</span> {profile.subtitle}
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: start + 0.6, duration: 0.9, ease }} className="mt-6 flex flex-wrap items-center gap-y-1 text-lg font-medium text-cream sm:text-2xl">
+          {profile.roleLine.map((r, i) => (
+            <span key={r} className="whitespace-nowrap">
+              {i > 0 && <span className="mx-2 text-gold">·</span>}
+              {r}
+            </span>
+          ))}
         </motion.p>
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: start + 0.9, duration: 1 }} className="mt-6 max-w-lg text-dim">
