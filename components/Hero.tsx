@@ -36,13 +36,13 @@ export default function Hero() {
       <div className="absolute top-1/3 -left-40 h-[500px] w-[500px] rounded-full bg-violet/15 blur-[140px]" />
       <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-gold/10 blur-[140px]" />
 
-      <motion.div style={{ y: sceneY, opacity: fade }} className="absolute inset-0 md:left-[38%]">
+      <motion.div style={{ y: sceneY, opacity: fade }} className="absolute inset-x-0 top-0 h-[44svh] lg:inset-y-0 lg:left-[48%] lg:h-auto">
         <motion.div className="h-full w-full" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.8, delay: start - 0.3, ease }}>
           <Scene3D />
         </motion.div>
       </motion.div>
 
-      <motion.div style={{ y: textY, opacity: fade }} className="pointer-events-none relative mx-auto w-full max-w-6xl px-4 pt-32 pb-24 sm:px-6">
+      <motion.div style={{ y: textY, opacity: fade }} className="pointer-events-none relative mx-auto w-full max-w-6xl px-4 pt-[42svh] pb-24 sm:px-6 lg:pt-32">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: start, duration: 0.8 }} className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs tracking-[0.18em] text-dim uppercase backdrop-blur">
           <span className="relative h-2 w-2">
             <span className="absolute inset-0 animate-pulse-ring rounded-full bg-green-400" />
@@ -51,19 +51,28 @@ export default function Hero() {
           Available for global projects
         </motion.div>
 
-        <h1 className="font-serif text-[clamp(3.6rem,11vw,9.5rem)] leading-[0.9] tracking-tight">
+        <div className="lg:max-w-[55%]">
+        <h1 className="font-serif text-[clamp(3.4rem,14vw,8rem)] leading-[0.9] tracking-tight lg:text-[clamp(3.4rem,8.5vw,8rem)]">
           <Line delay={0.1}>{profile.firstName}</Line>
           <Line delay={0.22} className="gold-text italic">{profile.lastName}</Line>
         </h1>
 
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: start + 0.6, duration: 0.9, ease }} className="mt-6 flex flex-wrap items-center gap-y-1 text-lg font-medium text-cream sm:text-2xl">
-          {profile.roleLine.map((r, i) => (
-            <span key={r} className="whitespace-nowrap">
-              {i > 0 && <span className="mx-2 text-gold">·</span>}
-              {r}
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: start + 0.6, duration: 0.9, ease }} className="mt-7">
+          <p className="flex items-center font-medium whitespace-nowrap text-cream text-[clamp(0.8rem,4.1vw,1.15rem)] sm:text-xl lg:text-[clamp(1rem,1.65vw,1.5rem)]">
+            {profile.roles.map((r, i) => (
+              <span key={r} className="flex items-center">
+                {i > 0 && <span className="mx-[0.7em] h-[1.05em] w-px bg-gold/70" />}
+                {r}
+              </span>
+            ))}
+          </p>
+          <div className="mt-4 inline-flex items-center gap-3 rounded-full border border-gold/40 bg-gradient-to-r from-gold/20 via-gold/5 to-transparent py-1.5 pr-5 pl-1.5 shadow-[0_0_30px_-10px_rgba(214,177,108,.6)] backdrop-blur">
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-gold text-xs text-ink">✦</span>
+            <span className="font-semibold tracking-[0.14em] text-gold2 uppercase text-[clamp(0.74rem,3.5vw,1rem)] sm:text-base lg:text-[clamp(0.85rem,1.1vw,1.05rem)]">
+              {profile.deployedRole}
             </span>
-          ))}
-        </motion.p>
+          </div>
+        </motion.div>
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: start + 0.9, duration: 1 }} className="mt-6 max-w-lg text-dim">
           {profile.intro}
@@ -82,6 +91,7 @@ export default function Hero() {
             </a>
           </Magnetic>
         </motion.div>
+        </div>
       </motion.div>
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: start + 1.4 }} className="absolute inset-x-0 bottom-8 mx-auto flex max-w-6xl items-end justify-between px-4 text-xs tracking-[0.2em] text-dim uppercase sm:px-6">

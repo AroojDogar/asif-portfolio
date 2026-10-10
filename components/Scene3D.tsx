@@ -91,7 +91,7 @@ function Dust() {
 
 export default function Scene3D() {
   return (
-    <Canvas camera={{ position: [0, 0, 6.5], fov: 45 }} dpr={[1, 1.8]} gl={{ antialias: true, alpha: true }}>
+    <Canvas camera={{ position: [0, 0, 7.2], fov: 45 }} dpr={[1, 1.8]} gl={{ antialias: true, alpha: true }}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[4, 5, 3]} intensity={2.4} color="#fff1d0" />
       <pointLight position={[-4, -2, 2]} intensity={30} color="#8b7bff" />

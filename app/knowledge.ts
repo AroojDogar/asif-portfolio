@@ -1,6 +1,6 @@
 import { profile, about, services, skills, stats, projects } from "./data";
 
-const roles = profile.roleLine.join(", ");
+const roles = [...profile.roles, profile.deployedRole].join(", ");
 
 // Everything the AI assistant knows about Asif, generated from data.ts.
 export const knowledge = `

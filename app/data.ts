@@ -4,8 +4,9 @@ export const profile = {
   name: "Mian Asif Langrah",
   firstName: "Mian Asif",
   lastName: "Langrah",
-  title: "Agentic AI Engineer",
-  roleLine: ["Agentic AI Engineer", "Forward Deployed Engineer", "AI Consultant", "AI Trainer"],
+  title: "Agentic AI Expert",
+  roles: ["Agentic AI Expert", "AI Consultant", "AI Trainer"],
+  deployedRole: "Forward Deployed Engineer",
   location: "Islamabad, Pakistan",
   intro:
     "I build AI agents, AI automations and AI-powered applications that do real work inside real businesses, and I train teams and students to build them too.",
@@ -25,7 +26,7 @@ export const stats = [
 ];
 
 export const about = [
-  "I'm an Agentic AI Engineer and Forward Deployed Engineer. I work directly with businesses to understand their workflows, then design, build and deploy AI agents, AI employees, automations and AI-powered applications that deliver measurable results.",
+  "I'm an Agentic AI Expert and Forward Deployed Engineer. I work directly with businesses to understand their workflows, then design, build and deploy AI agents, AI employees, automations and AI-powered applications that deliver measurable results.",
   "With 7+ years of experience and 200+ projects delivered, I also work as an AI consultant and trainer, helping teams and students master Generative and Agentic AI for the global market.",
 ];
 
